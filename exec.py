@@ -31,8 +31,8 @@ def getWallpapers():
 	os.system("zip /var/www/html/stuff/wallpaper/All.zip /var/www/html/stuff/wallpaper/*") #Zip into single file, perfect for downloading
 	
 while True:		
-	if int(time.strftime("%H", time.gmtime())) == 00 and int(time.strftime("%M", time.gmtime())) == 0: #Non working part to run application at certain time, is very strange behaviour, should work just fine
+	if int(time.strftime("%H", time.gmtime())) == 00 and int(time.strftime("%M", time.gmtime())) == 0: #Run the script at a certain time, mainly midnight of every day
 		getWallpapers()
 		time.sleep(60)
 	else:
-		time.sleep(60)
+		time.sleep(60) #used to prevent thread from taking 100% of CPU all the time
