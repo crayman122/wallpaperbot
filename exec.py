@@ -27,8 +27,9 @@ def getWallpapers():
 	os.system("rm /var/www/html/stuff/wallpaper/*.1") #Remove duplicates
 	os.system("rm /var/www/html/stuff/wallpaper/*.2") #Remove double duplicates
 	
-	os.system("rm /war/www/html/stuff/wallpaper/All.zip") #Remove existing zip file
-	os.system("zip /var/www/html/stuff/wallpaper/All.zip /var/www/html/stuff/wallpaper/*") #Zip into single file, perfect for downloading
+	os.system("rm /var/www/html/stuff/wallpaper/All.zip") #Remove existing zip file
+	os.system("cd /var/www/html/stuff/wallpaper/") #CD into wallpaper directory
+	os.system("zip All.zip /*") #Zip into single file, perfect for downloading
 	
 while True:		
 	if int(time.strftime("%H", time.gmtime())) == 00 and int(time.strftime("%M", time.gmtime())) == 0: #Run the script at a certain time, mainly midnight of every day
