@@ -24,7 +24,8 @@ def getWallpapers():
 			os.system("wget -P /var/www/html/stuff/wallpaper %s" %(url)) #Download image into folder, format could cause problems, but probably wont. URLs are automatically santized by the browser.
 		else:
 			pass
-	os.system("rm /var/www/html/stuff/wallpaper *.1") #Remove duplicates
+	os.system("rm /var/www/html/stuff/wallpaper/*.1") #Remove duplicates
+	os.system("rm /var/www/html/stuff/wallpaper/*.2") #Remove double duplicates
 	
 	os.system("rm /war/www/html/stuff/wallpaper/All.zip") #Remove existing zip file
 	os.system("zip /var/www/html/stuff/wallpaper/All.zip /var/www/html/stuff/wallpaper/*") #Zip into single file, perfect for downloading
