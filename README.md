@@ -1,2 +1,2 @@
 # wallpaperbot
-Wallpaper scraper for reddit.
+A Wallpaper scraper
